@@ -7,7 +7,7 @@
 	}
 	if($_SERVER['REQUEST_METHOD'] == "GET")
 	{
-		$conn = mysqli_error_connect("localhost", "root","") or die(mysqli_error()); //Connect to server
+		$conn = mysqli_connect("localhost", "root","") or die(mysqli_error()); //Connect to server
 		mysqli_select_db($conn, "first_db") or die("Cannot connect to database"); //Connect to database
 		$id = $_GET['id'];
 		mysqli_query($conn, "DELETE FROM list WHERE id='$id'");
