@@ -16,7 +16,7 @@
 
 
        mysqli_select_db($conn, "first_db") or die("Cannot connect to database"); //Conect to database
-       foreach($_POST['public'] in $each_check) //gets the data from the checkbox
+       foreach($_POST['public'] as $each_check) //gets the data from the checkbox
        {
           if($each_check != null){ //checks if checkbox is checked
              $decision = "yes"; // sets the value
