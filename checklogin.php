@@ -9,7 +9,7 @@
     mysqli_select_db($conn, "first_db") or die ("Cannot connect to database"); //Connect to database
     $query = mysqli_query($conn, "Select * from users WHERE username='$username'"); // Query the users table
     $exists = mysqli_num_rows($query); //Checks if username exists
-    $table_users = "":
+    $table_users = "";
     $table_password = "";
     if($exists > 0) //IF there are no returning rows or no existing username
     {
